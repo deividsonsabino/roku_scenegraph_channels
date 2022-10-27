@@ -5,10 +5,10 @@ end sub
 sub ShowScreen(node as object)
     prev = m.screenStack.Peek()
     if prev <> invalid
-        private.visible = false
+        prev.visible = false
     end if
 
-    m.Top.AppendChild(node)
+    m.top.AppendChild(node)
     node.visible = true
     node.SetFocus(true)
     m.screenStack.Push(node)
